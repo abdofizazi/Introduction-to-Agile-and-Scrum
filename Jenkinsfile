@@ -30,15 +30,4 @@ pipeline {
       }
     }
   }
-  post{
-    always{
-      echo "Finish building"
-    }
-    sucess{
-      echo "Built with sucess
-    }
-    failure{
-      echo "Failled"
-    }
-  }
 }
