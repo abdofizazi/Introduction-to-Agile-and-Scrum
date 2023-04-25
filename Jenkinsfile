@@ -31,9 +31,6 @@ pipeline {
       steps {
         echo 'Deploying the app..'
         echo DB_CREDENTIALS
-        withCredentials([]){
-          usernamePassword(credentials: db-server)
-        }
       }
     }
   }
