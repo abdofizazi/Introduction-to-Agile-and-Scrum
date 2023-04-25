@@ -4,6 +4,9 @@ pipeline {
   stages {
     stage("build") {
       steps {
+        script{
+          test=1+ 1>2? "Cool": "Not Cool"
+        }
         echo 'Building the app..'
       }
     }
