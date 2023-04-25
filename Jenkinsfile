@@ -12,6 +12,11 @@ pipeline {
       }
     }
     stage("test") {
+      when{
+        expression{
+          BRANCH_NAME == 'dev'
+        }
+      }
       steps {
         echo 'testing the app..'
         nodejs('node-16'){
@@ -23,6 +28,17 @@ pipeline {
       steps {
         echo 'Deploying the app..'
       }
+    }
+  }
+  post{
+    always{
+      echo "Finish building"
+    }
+    sucess{
+      echo "Built with sucess
+    }
+    failure{
+      echo "Failled"
     }
   }
 }
