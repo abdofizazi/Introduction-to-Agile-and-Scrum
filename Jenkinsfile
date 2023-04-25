@@ -34,5 +34,11 @@ pipeline {
     always{
       echo "Built done"
     }
+    success{
+      echo "Built with success.."
+    }
+    failure{
+      echo "Failed"
+    }
   }
 }
