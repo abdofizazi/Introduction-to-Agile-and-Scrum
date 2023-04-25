@@ -15,8 +15,7 @@ pipeline {
       steps {
         echo 'testing the app..'
         nodejs('node-16'){
-          sh 'npm init'
-          sh 'npm install  express cors'
+          sh 'npm install'
         }
       }
     }
