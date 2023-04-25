@@ -6,6 +6,7 @@ pipeline {
       steps {
         script{
           test=1+ 1>2? "Cool": "Not Cool"
+          echo test
         }
         echo 'Building the app..'
       }
