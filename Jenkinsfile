@@ -14,6 +14,10 @@ pipeline {
     stage("test") {
       steps {
         echo 'testing the app..'
+        nodejs('node-16'){
+          sh 'npm init'
+          sh 'npm install'
+        }
       }
     }
     stage("deploy") {
