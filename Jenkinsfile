@@ -30,4 +30,9 @@ pipeline {
       }
     }
   }
+  post{
+    always{
+      echo "Built done"
+    }
+  }
 }
